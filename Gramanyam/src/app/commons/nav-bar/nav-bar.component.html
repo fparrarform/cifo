@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a [routerLink]="['/home']" class="navbar-brand" href="#">HOME (logo)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">    
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Restaurantes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a [routerLink]="['/restaurants']" class="dropdown-item" href="#">Listado (todos)</a>
+            <a [routerLink]="['/underConstruction']"class="dropdown-item" href="#">Reserva</a>
+            <div class="dropdown-divider"></div>
+            <a [routerLink]="['/underConstruction']" class="dropdown-item" href="#">Comida a domicilio</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Area de usuario</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 searchnuestro">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button (click)="noRefresh($event)" [routerLink]="['/underConstruction']" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+      <form class="form-inline my-2 my-lg-0">
+        <button (click)="noRefresh($event)" *ngIf= "!isLogged" [routerLink]="['/login']" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        <button (click)="noRefresh($event)" *ngIf= "!isLogged" [routerLink]="['register/user']" class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+        <button (click)="noRefresh($event); onLogOut()" *ngIf= "isLogged" class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+      </form>
+
+    </div>
+  </nav>
+

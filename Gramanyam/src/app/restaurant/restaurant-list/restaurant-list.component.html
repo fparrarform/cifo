@@ -1,0 +1,16 @@
+<ng-container *ngFor="let item of restaurants">
+    <div class="jumbotron">
+        <h1 class="display-4">{{item.name}}</h1>
+        <ng-container *ngFor= "let photo of photos">
+          <img  src= {{photo.photo1}}>
+        </ng-container>
+        <br>
+        <br>        
+        <p class="lead">Tipo de comida: {{item.categoria}}</p>      
+        <p>Teléfono: {{item.telefono}}</p>
+        <hr class="my-4">
+        <p>Descripción: </p>
+        <p>{{item.descripcion}}</p>
+        <a [routerLink]="['/restaurant', item.id]" class="btn btn-outline-success my-2 my-sm-0" href="#" role="button"> Ver más</a>
+      </div>
+</ng-container>

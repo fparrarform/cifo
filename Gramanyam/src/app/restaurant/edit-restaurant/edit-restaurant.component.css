@@ -1,0 +1,16 @@
+.contenedor-form {
+    margin: 40px auto 2px auto;
+    width: 80%;
+    background-color:#343a40;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+input {
+    width: 100%;
+}
+
+.col-md-8 {
+   margin: auto;
+}

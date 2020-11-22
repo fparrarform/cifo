@@ -1,0 +1,15 @@
+<div class="jumbotron">  
+  <h1 class="display-4">{{restaurant.name}}</h1> 
+  <ng-container *ngFor= "let photo of photos">
+      <img  src= {{photo.photo1}}>
+    </ng-container> 
+  <p class="lead">Tipo de comida: {{restaurant.categoria}}</p>
+  <p>Teléfono: </p>
+  <p>{{restaurant.telefono}}</p>
+  <hr class="my-4">
+  <p>Descripción: </p>
+  <p>{{restaurant.descripcion}}</p>  
+  <a [routerLink]="['/editRestaurant', restaurant.id]" class="btn btn-outline-success my-2 my-sm-0" href="#" role="button"> Editar</a>
+</div>
+
+

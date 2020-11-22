@@ -1,0 +1,174 @@
+<!-- <p>form-restaurant works!</p> -->
+
+<div class="container contenedor-form">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Datos restaurante</legend>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input [(ngModel)]="restaurant.name" id="fname" name="name" type="text" placeholder="Nombre de tu restaurante" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input [(ngModel)]="restaurant.direccion" id="lname" name="name" type="text" placeholder="Direccion de tu restaurante" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input [(ngModel)]="restaurant.email" id="email" name="user" type="text" placeholder="Email del restaurante" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input [(ngModel)]="restaurant.telefono" id="phone" name="restaurant" type="text" placeholder="Introduce tu teléfono" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                          <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                          <div class="col-md-8">
+                              <input [(ngModel)]="restaurant.website" id="website" name="website" type="text" placeholder="Web de tu restaurante" class="form-control">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                        <div class="col-md-8">
+                            <input [(ngModel)]="restaurant.categoria" id="category" name="category" type="text" placeholder="Categoria o tipo de comida" class="form-control">
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea [(ngModel)]="restaurant.descripcion" class="form-control" id="message" name="message" placeholder="Descripción de tu restaurante" rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button (click)='addRestaurant()' type="submit" class="btn btn-outline-success my-2 my-sm-0">Nyam!</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<p>{{ mensaje | json }} </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <h1> Tercer formulario</h1>
+    <form (change)="checkButton()">
+        <div class="form-group">
+          <label for="realName">Nombre real:</label>
+          <input type="text" class="form-control" id="realName" name="realName" #realNameField
+          [placeholder]="placeholder.realName"
+          [(ngModel)]="userData.realName">
+  
+        </div>
+        <div class="form-group">
+            <label for="userName">Nombre de Usuario:</label>
+            <input type="text" class="form-control" id="userName" name="userName" #userNameField
+            [placeholder]="placeholder.userName"
+            [(ngModel)]="userData.userName">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" #passwordField
+            [placeholder]="placeholder.password"
+            [(ngModel)]="userData.password">
+        </div>
+  
+        <div class="form-group">
+            <label for="confirmUserPass">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirmUserPass" name="confirmUserPass" #confirmUserPassField
+            [placeholder]="placeholder.confirmUserPass"
+            [(ngModel)]="userData.confirmUserPass">
+        </div>
+        <div class="form-group">
+            <label for="userEmail">Email:</label>
+            <input type="email" class="form-control" id="userEmail" name="userEmail" #userEmailField
+            [placeholder]="placeholder.userEmail"
+            [(ngModel)]="userData.userEmail">
+        </div>
+        <div class="form-group">
+          <label>Continente:</label>
+          <select class="form-control" name="userContinent"
+            [(ngModel)]="userData.continent"
+          >
+            <option *ngFor="let continent of continents"
+              [value]="continent.value"
+              [selected]="continent.selected"
+              [disabled]="continent.disabled"
+            >{{continent.text}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+          <input type="radio" class="form-control" #{{genders.H.id}}
+            [value]="genders.H.value"
+            [name]="genders.H.name"
+            [checked]="genders.H.checked"
+            [(ngModel)]="userData.gender"
+            >{{genders.H.label}}
+          </label>
+          <label>
+          <input type="radio" class="form-control" #{{genders.M.id}}
+            [value]="genders.M.value"
+            [name]="genders.M.name"
+            [checked]="genders.M.checked"
+            [(ngModel)]="userData.gender"
+            >{{genders.M.label}}
+          </label>
+          <div class="form-group">
+              <label>Mayor de edad:
+              <input type="checkbox" name="user18" #upto18 value="true" [(ngModel)]="userData.upTo18">
+              </label>
+            </div>
+            <input type="button" (click)="saveUser()" class="btn btn-dark" #sendbutton value="Aceptar" [disabled]="botonDesactivado">
+          </div>
+      </form>
+      {{ user | json}}<br>
+  </div> -->
+  

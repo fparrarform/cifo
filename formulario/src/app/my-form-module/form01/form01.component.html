@@ -1,0 +1,14 @@
+<h1>Primer formulario</h1>
+<form>
+    <label>Nombre de usuario:
+        <input type='text' class='form-control' #usernameField [placeholder]='placeholders.username'>        
+    </label>
+    <br>
+    <label>Contraseña:
+        <input type='text' class='form-control' #usernamePass [placeholder]='placeholders.userpass'>        
+    </label>
+    <br>
+    <input type='button' (click)='recibirDatos(usernameField, usernamePass);' class='btn btn-primary' #sendButton value='Aceptar'>
+</form>
+
+<p> {{nameInput}} </p>

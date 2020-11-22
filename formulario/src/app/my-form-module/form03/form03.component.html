@@ -1,0 +1,25 @@
+<h1>Tercer formulario</h1>
+<form #formulario>
+    <label>Nombre de usuario:
+        <input type='text' class='form-control' #usernameField [placeholder]='placeholders.username'>        
+    </label>
+    <br>
+    <label>Contraseña:
+        <input type='password' class='form-control' #usernamePass [placeholder]='placeholders.userpass'>        
+    </label>
+    <br>
+    <input type='button' (click)='recibirDatos($event, formulario);' class='btn btn-primary' #sendButton value='Aceptar'>
+</form>
+
+
+
+<ng-container *ngIf="(user.getUsername() >'' && user.getPassword() > ''); else faltandatos">
+    <div class="text-center">id : <strong>{{user.getId()}}</strong></div>
+   <div class="text-center">Nombre : <strong>{{user.getUsername()}}</strong></div>
+    <div class="text-center"> Password: <strong>{{user.getPassword()}}</strong></div>
+
+</ng-container>
+
+<ng-template #faltandatos>
+  <p class="text-center"> Falta usuario, password o ambos</p>
+</ng-template>
