@@ -1,0 +1,39 @@
+body{
+margin:0;
+padding:0;
+}
+
+.grid{
+  background-color: #ee2418;
+  width: 30rem;
+  display: grid;
+  grid-template-rows: repeat(3,10rem);
+  grid-template-columns: repeat(3,10rem);
+}
+
+.grid-item-1,.grid-item-5{
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 10rem solid white;
+}
+
+.grid-item:not(.grid-item-1):not(.grid-item-5){
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 10rem solid black;
+}
+
+
+
+/* 
+background-color: #009bb1;
+background-color: #ee8c1d;
+background-color: #05368c;
+background-color: #009135;
+background-color: #e22961;
+background-color: #5c66a5;
+background-color: #fccc29;
+background-color: #62b9e4;
+background-color: #e1261c;
+background-color: #95c022;
+background-color: #911c7f; */

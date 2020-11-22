@@ -1,0 +1,14 @@
+/*/*
+For (primera expressió a evaluar; condició de sortida; expressió que s'executa a cada volta) 
+--> EXEMPLE: For (i=0; i<10 ; i++) Cuando i es 0 entra en bucle hasta que suma 10 y sale. 
+*/
+
+for (i=1; i<=3 ; i++) {
+    if(numSecreto !==num)
+    intento= i
+}
+
+/* Caso de contador de oportunidades */*/
+
+
+/* Hacer un For de un string para que la salida sea un console.log por cada una de las letras*/*/

@@ -1,0 +1,56 @@
+body{
+margin:0;
+padding:0;
+}
+
+.grid{
+  background-color: #dedfd8;
+  height: calc(100vh - 2rem);
+  padding: 1rem;
+  
+  display: grid;
+  grid-template-areas: ".       header   header" 
+                        "bad    .         empty" 
+                        "religion religion .";  
+  
+  grid-template-columns: 2fr 1fr 1fr; 
+  grid-template-rows: 1fr 3fr 3fr;
+  grid-gap: 1rem;
+  
+}
+
+
+.header{
+  grid-area: header; 
+  background: #000;
+}
+
+.bad {
+  grid-area: bad;
+}
+
+.empty{
+  grid-area: empty;
+}
+.religion{
+  grid-area: religion;
+}
+
+.bad, .religion, .empty{
+  background-color: red;
+}
+
+
+
+/* 
+background-color: #009bb1;
+background-color: #ee8c1d;
+background-color: #05368c;
+background-color: #009135;
+background-color: #e22961;
+background-color: #5c66a5;
+background-color: #fccc29;
+background-color: #62b9e4;
+background-color: #e1261c;
+background-color: #95c022;
+background-color: #911c7f; */
